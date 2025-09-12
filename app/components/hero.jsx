@@ -7,14 +7,16 @@ const Hero = () => {
     <section className="pt-24 pb-20 md:pt-14 2xl:pt-10 relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <video
-          src="/herovideo.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        ></video>
+       <video
+  src="/herovideo.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="w-full h-full object-cover"
+></video>
+
         
        {/* Top-left red gradient overlay with grid */}
 <div
