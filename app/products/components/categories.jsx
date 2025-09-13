@@ -39,7 +39,7 @@ export default function Categories() {
             <div
               key={index}
               onClick={() => handleRedirect(item)}
-              className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-[#1A1D21] hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-500 min-w-[250px] sm:min-w-[300px] md:min-w-[350px]"
+              className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-[#1A1D21] hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-500 w-[250px] sm:w-[300px] md:w-[350px]"
             >
               {/* Background Image */}
               <Image
