@@ -71,7 +71,7 @@ export const products = {engine: {
     title1: "Ensuring",
     title2: "Reliable Performance",
     image: "/pp1.png",
-    heroImage:"/he3.png",
+    heroImage:"/recban.png",
     mainhead:"Categories of Reconditioned Sub-Assemblies:",
     para:"At Setlite Engineers Limited, we specialize in the comprehensive reconditioning of earthmoving machinery sub-assemblies, providing cost-effective solutions that restore performance and extend equipment life. Unlike intermediaries, we manage the entire process in-house—from teardown and inspection to reassembly and testing—ensuring each component meets or exceeds OEM standards. Our services support a wide range of heavy equipment models and brands, delivering reliable, ready-to-install sub-assemblies backed by technical support and warranty for minimal downtime and maximum operational efficiency.",
     description: "Quality spares and sub assemblies for HEMM. Each part is tested and rebuilt for consistent performance and long-term reliability.",
