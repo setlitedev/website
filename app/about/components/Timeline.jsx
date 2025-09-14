@@ -32,7 +32,7 @@ const timelineData = [
     year: "2014",
     title: "Authorized AVTEC Dealership",
     description:
-      "Partnered with AVTEC, India's leading manufacturer of powertrain and precision-engineered products, supporting OEMs like Allison, BEML, Caterpillar, and ISUZU.",
+      "Partnered with AVTEC, India's leading manufacturer of powertrain and precision-engineered products, supporting OEMs like BEML, Caterpillar, and ISUZU.",
     logo: "/t4.png",
     image: null,
     align: "right",
