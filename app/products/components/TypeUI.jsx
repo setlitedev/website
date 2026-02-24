@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { Mail, MessageCircle } from "lucide-react";
 
 export default function TypeUI({ type }) {
   const [formData, setFormData] = useState({
@@ -20,29 +19,16 @@ export default function TypeUI({ type }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleWhatsApp = () => {
-    const text = encodeURIComponent(
-      `*Product Enquiry for: ${type.name}*\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-    );
-    window.open(`https://wa.me/919716001002?text=${text}`, "_blank");
-  };
-
-  const handleGmail = () => {
-    const subject = encodeURIComponent(`Product Query: ${type.name} from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Product: ${type.name}\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:SALES@SETLITE.COM?subject=${subject}&body=${body}`;
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Add your API integration here
   };
 
   return (
     <div className="min-h-screen text-white px-6 md:px-12 pt-[20vh] pb-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
-
+        
         {/* LEFT SECTION */}
         <div>
           {/* MAIN IMAGE */}
@@ -67,10 +53,11 @@ export default function TypeUI({ type }) {
                   width={120}
                   height={100}
                   onClick={() => setSelectedImage(img)}
-                  className={`rounded-lg shadow-md cursor-pointer hover:scale-105 transition ${selectedImage === img
+                  className={`rounded-lg shadow-md cursor-pointer hover:scale-105 transition ${
+                    selectedImage === img
                       ? "ring-2 ring-yellow-400"
                       : "ring-1 ring-gray-700"
-                    }`}
+                  }`}
                 />
               ))}
 
@@ -153,24 +140,12 @@ export default function TypeUI({ type }) {
               onChange={handleChange}
               className="w-full px-4 py-3 bg-[#111] text-white rounded-lg focus:ring-2 focus:ring-yellow-400 outline-none"
             />
-            <div className="space-y-3">
-              <button
-                type="button"
-                onClick={handleWhatsApp}
-                className="w-full py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-md flex items-center justify-center gap-2"
-              >
-                <MessageCircle size={20} />
-                Send Message via WhatsApp
-              </button>
-              <button
-                type="button"
-                onClick={handleGmail}
-                className="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-md flex items-center justify-center gap-2"
-              >
-                <Mail size={20} />
-                Send Message via Gmail
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="w-full bg-yellow-400 text-black font-semibold py-3 rounded-lg hover:bg-yellow-500 transition"
+            >
+              Send Message
+            </button>
           </form>
         </div>
       </div>

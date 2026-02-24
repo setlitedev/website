@@ -92,7 +92,7 @@ export default function OurExpertise() {
             </div>
             <div className="p-6 space-y-4">
               <div className="flex items-center space-x-3 ">
-                <span className="">{item.icon}</span>
+               <span className="">{item.icon}</span>
                 <h3 className="text-xl font-semibold">{item.title}</h3>
               </div>
               <ul className="text-gray-300 space-y-1">

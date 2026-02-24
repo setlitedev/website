@@ -1,14 +1,13 @@
 export const service = {
   transmission: {
     id: "transmission",
-    head: "",
+    head:"",
     title: "Transmission Overhauling",
     title1: "Transmission Overhauling",
     title2: "and Repair Services",
     image: "/transover.jpg",
-    images: ["/transover.jpg", "/transover2.jpg"],
     heroImage: "/hero1.png",
-    subhead: `At Setlite, We Keep Your Machines Running Strong
+    subhead:`At Setlite, We Keep Your Machines Running Strong
 We provide expert transmission overhauls and genuine AVTEC parts.
 Our team ensures reliable performance, minimal downtime, and lasting durability.`,
     description:
@@ -19,11 +18,11 @@ Our team ensures reliable performance, minimal downtime, and lasting durability.
         description:
           "Since 2014, Setlite Engineers has been an authorized dealer of AVTEC Limited, a renowned manufacturer of powertrain and precision-engineered products. This partnership enhances the availability of AVTEC transmissions and spares across India, catering to the growing needs of the automotive and off-highway industries. AVTEC currently supplies the TT/TRT 2000 series, ideal for wheel loaders, aircraft tow tractors, heavy-duty forklifts, and rail applications, featuring a twin-turbine design for high torque multiplication and versatile short or long drop output configurations. The CRT 5633 transmission is tailored for railway and utility vehicles, offering a compact powershift solution capable of handling up to 430 HP, while the CT 100 powers forklifts in the 5–10 ton range, with equal forward and reverse gears and manual, hydraulic, or electric shift options. AVTEC’s legacy transmissions, including the CLT 754, CLBT 754, and M 6610, are also fully supported through our services.",
         specs: [
-          {
-            label: "Applicable Machines",
-            value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
-          }
-          ,
+{
+  label: "Applicable Machines",
+  value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
+}
+,
           { label: "Testing", value: "100% Load & Functional Tested" },
         ],
       },
@@ -32,42 +31,41 @@ Our team ensures reliable performance, minimal downtime, and lasting durability.
         description:
           "Our transmission overhaul process is designed to restore efficiency, durability, and performance. We begin with a thorough inspection and diagnostic assessment to identify wear, leaks, or other performance issues. Transmissions are carefully disassembled, cleaned, and assessed, with reusable components reconditioned to OEM standards and damaged parts replaced with genuine spares. After precision reassembly, each transmission undergoes rigorous testing under simulated load conditions to ensure smooth operation, high torque handling, and reliable performance. We also provide on-site commissioning and support for seamless integration at your facility.",
         specs: [
-          {
-            label: "Applicable Machines",
-            value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
-          }
-          ,
+{
+  label: "Applicable Machines",
+  value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
+}
+,
           { label: "Testing", value: "100% Load & Functional Tested" },
         ],
       },
-
+    
       {
         name: "State-of-the-Art Workshops",
         description:
           "Our workshops in Prithla and Ballabgarh (Delhi NCR) are equipped with modern tools, precision machinery, and advanced testing facilities, allowing our experienced team to handle transmissions of all capacities with accuracy and care. We also offer reconditioned exchange transmissions, providing a cost-effective and reliable solution for clients who require quick turnaround without compromising quality.",
         specs: [
-          {
-            label: "Applicable Machines",
-            value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
-          }
-          ,
+{
+  label: "Applicable Machines",
+  value: "Setlite Engineers Limited offers expert transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE, and tower wagons. We specialize in transmissions from leading manufacturers such as Komatsu, BEML, Caterpillar, and AVTEC Limited, ensuring that every transmission we service delivers optimal performance, reliability, and longevity."
+}
+,
           { label: "Testing", value: "100% Load & Functional Tested" },
         ],
       },
-
+    
     ],
   },
 
   engine: {
     id: "engine",
-    head: "Engine Overhauling Process",
+    head:"Engine Overhauling Process",
     title: "Engine Overhauling",
     title1: "Engine Overhauling",
     title2: "and Repair Services",
     image: "/engover.jpg",
-    images: ["/comm.jpg", "/comm2.jpg"],
-    heroImage: "/hero2.png",
-    subhead: `At Setlite, We Bring Your Engines Back to Life
+ heroImage: "/hero2.png",
+ subhead:`At Setlite, We Bring Your Engines Back to Life
 Expert overhaul and repair services for Komatsu, Cummins, BEML, Caterpillar, and more.
 Ensuring peak performance, reliability, and long-lasting efficiency for your equipment.`,
     description:
@@ -141,13 +139,13 @@ Ensuring peak performance, reliability, and long-lasting efficiency for your equ
 
   hemm: {
     id: "hemm",
-    head: "Our Field Service Capabilities",
+    head:"Our Field Service Capabilities",
     title: "Complete HEMM Maintenance",
     title1: "HEMM Maintenance",
     title2: "and Repair",
     image: "/serhem.png",
-    heroImage: "/hero3.png",
-    subhead: "At Setlite Engineers Limited, our specialized Field Service operations are designed to ensure reliability, productivity, and long-term performance for our customers. We combine technical expertise with a customer-first approach to keep equipment running at its best.",
+   heroImage: "/hero3.png",
+   subhead:"At Setlite Engineers Limited, our specialized Field Service operations are designed to ensure reliability, productivity, and long-term performance for our customers. We combine technical expertise with a customer-first approach to keep equipment running at its best.",
     description:
       "Comprehensive maintenance for Heavy Earth Moving Machinery (HEMM), ensuring longer uptime, reduced breakdowns, and operational efficiency.",
     types: [
@@ -214,9 +212,9 @@ Ensuring peak performance, reliability, and long-lasting efficiency for your equ
     title1: "Railway Maintenance",
     title2: "and Repair",
     image: "/serrail.png",
-    heroImage: "/hero4.png",
-    head: "Our Specialized Services",
-    subhead: "Specialized maintenance solutions for railway systems including engines, bogies, tracks, and braking systems, ensuring reliable and safe rail operations.",
+ heroImage: "/hero4.png",
+  head:"Our Specialized Services",
+  subhead:"Specialized maintenance solutions for railway systems including engines, bogies, tracks, and braking systems, ensuring reliable and safe rail operations.",
     description:
       "Specialized maintenance solutions for railway systems including engines, bogies, tracks, and braking systems, ensuring reliable and safe rail operations.",
     types: [

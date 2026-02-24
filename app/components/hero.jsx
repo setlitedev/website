@@ -66,25 +66,25 @@ export default function HeroPage() {
       aria-label="Hero Section - Heavy Equipment Services"
     >
       {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        poster="/heroposter.png"
-        crossOrigin="anonymous"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        {/* <source
-          src="https://ik.imagekit.io/l76jfketc/video/herovideo.webm?tr=w-1920,q-40,f-auto"
-          type="video/webm"
-        /> */}
-        <source
-          src="https://ik.imagekit.io/l76jfketc/video/herovideo.mp4?tr=w-1920,q-40,f-auto"
-          type="video/mp4"
-        />
-      </video>
+<video
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+
+  crossOrigin="anonymous"
+  className="absolute inset-0 h-full w-full object-cover"
+>
+  <source
+    src="https://ik.imagekit.io/l76jfketc/video/herovideo.webm?tr=w-1920,q-40,f-auto"
+    type="video/webm"
+  />
+  <source
+    src="https://ik.imagekit.io/l76jfketc/video/herovideo.mp4?tr=w-1920,q-40,f-auto"
+    type="video/mp4"
+  />
+</video>
 
 
 
