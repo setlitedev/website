@@ -2,7 +2,7 @@
 
 import SingleProductShowcase from './SingleProductShowcase';
 
-export default function Page({ params }) {
-  const { id } = params; // Safe access in server component
-  return  <SingleProductShowcase id={id} />;
+export default async function Page({ params }) {
+  const { id } = await params; // Safe access in server component
+  return <SingleProductShowcase id={id} />;
 }

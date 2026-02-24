@@ -34,25 +34,11 @@ Message: ${form.message}`
     <div className="text-white min-h-screen font-sans bg-gradient-to-r from-gray-900 via-black to-gray-950">
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
-       <video
-  className="absolute inset-0 w-full h-full object-cover will-change-transform"
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="auto"
-  poster="https://ik.imagekit.io/l76jfketc/video/contposter.png?tr=w-1920,q-40"
-  crossOrigin="anonymous"
->
-  <source
-    src="https://ik.imagekit.io/l76jfketc/video/contvideo%20(1)%20(1)%20(1).webm?tr=w-1920,q-40,f-auto"
-    type="video/webm"
-  />
-  <source
-    src="https://ik.imagekit.io/l76jfketc/video/contvideo%20(1)%20(1)%20(1).mp4?tr=w-1920,q-40,f-auto"
-    type="video/mp4"
-  />
-</video>
+        <img
+          src="/contactus.jpg"
+          alt="Contact Us Background"
+          className="absolute inset-0 w-full h-full object-cover will-change-transform"
+        />
 
         <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
@@ -181,12 +167,30 @@ Message: ${form.message}`
                   required
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-300"
-              >
-                Send Message via WhatsApp
-              </button>
+              <div className="space-y-3">
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-md"
+                >
+                  Send Message via WhatsApp
+                </button>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Format a structured Email message
+                    const subject = encodeURIComponent(`New Contact Enquiry from ${form.name}`);
+                    const body = encodeURIComponent(
+                      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nMessage:\n${form.message}`
+                    );
+                    window.location.href = `mailto:SALES@SETLITE.COM?subject=${subject}&body=${body}`;
+                  }}
+                  className="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-md flex items-center justify-center gap-2"
+                >
+                  <Mail size={20} />
+                  Send Message via Gmail
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -205,8 +209,8 @@ Message: ${form.message}`
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
-           
-           
+
+
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -216,7 +220,7 @@ Message: ${form.message}`
             </div> <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
-             <h3 className="font-bold text-white">Service Center {"(Unit-1)"}</h3>
+                <h3 className="font-bold text-white">Service Center {"(Unit-1)"}</h3>
 
                 <p>SETLITE ENGINEERS LIMITED , REVENUE ESTATE, GT ROAD, AAMRU, Palwal, Palwal, Haryana, 121102</p>
               </div>
