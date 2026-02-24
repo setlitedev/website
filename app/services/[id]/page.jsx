@@ -7,7 +7,6 @@ import { ChevronRight, Wrench } from "lucide-react";
 import Footer from "@/app/components/footer";
 import WhyPartner from "@/app/components/whyus";
 import Link from "next/link";
-import ServiceImageSlider from "../components/ServiceImageSlider";
 
 // 1. Hero Component
 const ServiceHero = ({ heroImage, title1, title2, description }) => {
@@ -49,8 +48,8 @@ const ServiceIntro = ({ mainTitle, introDescription }) => {
 };
 
 // 3. Main Page Component
-export default async function ServiceDetailPage({ params }) {
-  const { id } = await params;
+export default function ServiceDetailPage({ params }) {
+  const { id } = params;
   const serviceData = service[id];
 
   if (!serviceData) {
@@ -97,39 +96,39 @@ export default async function ServiceDetailPage({ params }) {
             {uniqueSupportedItems.length > 0 && (
               <div className="mb-10">
                 <p className="text-sm text-gray-300">
-
+             
                   {uniqueSupportedItems.join(", ")}
                 </p>
               </div>
             )}
 
             {/* Process Section */}
-            {serviceData.types.some((type) => type.name) && (
-              <div>
-                <h2 className="text-2xl font-bold text-white border-b-2 border-yellow-400 pb-3">
-                  {serviceData.head}
-                </h2>
-                <ul role="list" className="mt-8 space-y-6">
-                  {serviceData.types.map((type, index) =>
-                    type.name ? ( // Only render if name exists
-                      <li key={index} className="flex gap-x-4">
-                        <Wrench
-                          className="mt-1 h-5 w-5 flex-none text-yellow-400"
-                          aria-hidden="true"
-                        />
-                        <span>
-                          <strong className="font-semibold text-md text-white">
-                            {type.name}
-                          </strong>
-                          <br />
-                          <span className="text-gray-300 text-sm">{type.description}</span>
-                        </span>
-                      </li>
-                    ) : null
-                  )}
-                </ul>
-              </div>
-            )}
+     {serviceData.types.some((type) => type.name) && (
+  <div>
+    <h2 className="text-2xl font-bold text-white border-b-2 border-yellow-400 pb-3">
+      {serviceData.head}
+    </h2>
+    <ul role="list" className="mt-8 space-y-6">
+      {serviceData.types.map((type, index) =>
+        type.name ? ( // Only render if name exists
+          <li key={index} className="flex gap-x-4">
+            <Wrench
+              className="mt-1 h-5 w-5 flex-none text-yellow-400"
+              aria-hidden="true"
+            />
+            <span>
+              <strong className="font-semibold text-md text-white">
+                {type.name}
+              </strong>
+              <br />
+              <span className="text-gray-300 text-sm">{type.description}</span>
+            </span>
+          </li>
+        ) : null
+      )}
+    </ul>
+  </div>
+)}
 
 
             {/* CTAs */}
@@ -153,26 +152,28 @@ export default async function ServiceDetailPage({ params }) {
 
           {/* Right Column */}
           <div className="flex items-center justify-center">
-            {serviceData.images && serviceData.images.length > 1 ? (
-              <ServiceImageSlider
-                images={serviceData.images}
-                title={serviceData.title}
+            <div className="w-full aspect-w-1 aspect-h-1">
+              <Image
+                src={serviceData.image}
+                alt={serviceData.title}
+                width={600}
+                height={600}
+                className="object-cover rounded-2xl border border-gray-800 shadow-2xl shadow-yellow-400/10"
               />
-            ) : (
-              <div className="w-full aspect-w-1 aspect-h-1">
-                <Image
-                  src={serviceData.image}
-                  alt={serviceData.title}
-                  width={600}
-                  height={600}
-                  className="object-cover rounded-2xl border border-gray-800 shadow-2xl shadow-yellow-400/10"
-                />
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
-      <WhyPartner />
+      <WhyPartner/>
+      {/* Disclaimer */}
+      <div className="border-b border-gray-800 pt-4  px-4 pb-10">
+        <p className="text-xs md:text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
+          <strong>Disclaimer:</strong> All brand names and images used are
+          solely for reference and illustration purposes. Setlite Engineers
+          Limited does not imply any ownership or direct affiliation unless
+          specifically stated.
+        </p>
+      </div>
       <Footer />
     </main>
   );

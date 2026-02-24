@@ -97,8 +97,7 @@ const Timeline = () => {
                     src={item.logo || item.image}
                     alt="timeline"
                     fill
-                    sizes="80px"
-                    className="object-cover w-auto h-auto"
+                    className="object-cover"
                   />
                 </div>
               )}
@@ -130,8 +129,7 @@ const Timeline = () => {
                         src={item.logo || item.image}
                         alt="timeline"
                         fill
-                        sizes="128px"
-                        className="object-cover w-auto h-auto"
+                        className="object-cover"
                       />
                     </div>
                   )}
@@ -154,8 +152,7 @@ const Timeline = () => {
                         src={item.logo || item.image}
                         alt="timeline"
                         fill
-                        sizes="128px"
-                        className="object-cover w-auto h-auto"
+                        className="object-cover"
                       />
                     </div>
                   )}

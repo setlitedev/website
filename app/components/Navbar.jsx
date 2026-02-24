@@ -20,7 +20,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [isMoreOpen, setIsMoreOpen] = useState(false); // Mobile dropdown
   const [mounted, setMounted] = useState(false);
 
   // Ensure hydration-safe rendering
@@ -41,9 +41,12 @@ const Navbar = () => {
     { label: "Products", href: "/products", icon: Box },
     { label: "Services", href: "/services", icon: Wrench },
     { label: "Contact Us", href: "/contact", icon: PhoneIcon },
-    { label: "Partners", href: "/partners", icon: Box },
   ];
 
+  const moreItems = [
+    { label: "Partners", href: "/partners" },
+    { label: "Blogs", href: "/blogs" },
+  ];
 
   if (!mounted) {
     return (
@@ -57,7 +60,6 @@ const Navbar = () => {
                   alt="SEL Logo"
                   width={48}
                   height={48}
-                  className="w-auto h-auto"
                   priority
                 />
               </div>
@@ -79,10 +81,11 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-6 pb-6 ${isScrolled
-          ? "bg-black dark:bg-black backdrop-blur-lg border-b border-gray-200 dark:border-gray-700 shadow-md py-2"
-          : "bg-transparent py-3"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-6 pb-6 ${
+          isScrolled
+            ? "bg-black dark:bg-black backdrop-blur-lg border-b border-gray-200 dark:border-gray-700 shadow-md py-2"
+            : "bg-transparent py-3"
+        }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -95,7 +98,6 @@ const Navbar = () => {
                     alt="SEL Logo"
                     width={48}
                     height={48}
-                    className="w-auto h-auto"
                     priority
                   />
                 </div>
@@ -128,7 +130,27 @@ const Navbar = () => {
                 </Link>
               ))}
 
-
+              {/* More Dropdown */}
+              <div className="relative ml-2 group">
+                <button className="flex items-center space-x-1 text-sm font-medium text-white dark:text-gray-200 hover:text-[#FBC400] transition-all duration-200">
+                  <span>More</span>
+                  <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                <div className="absolute left-0 mt-3 w-36 bg-black dark:bg-gray-900 shadow-lg rounded-xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-out invisible group-hover:visible">
+                  <ul className="py-2">
+                    {moreItems.map((sub) => (
+                      <li key={sub.label}>
+                        <Link
+                          href={sub.href}
+                          className="block px-4 py-2 text-xs text-white dark:text-gray-200 hover:text-yellow-400 dark:hover:bg-gray-800 rounded-md transition-all duration-200"
+                        >
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </nav>
 
             {/* Desktop Actions */}
@@ -159,13 +181,15 @@ const Navbar = () => {
             >
               {isMobileMenuOpen ? (
                 <X
-                  className={`h-6 w-6 ${isScrolled ? "text-white" : "text-white dark:text-white"
-                    }`}
+                  className={`h-6 w-6 ${
+                    isScrolled ? "text-white" : "text-white dark:text-white"
+                  }`}
                 />
               ) : (
                 <Menu
-                  className={`h-6 w-6 ${isScrolled ? "text-white" : "text-white dark:text-white"
-                    }`}
+                  className={`h-6 w-6 ${
+                    isScrolled ? "text-white" : "text-white dark:text-white"
+                  }`}
                 />
               )}
             </button>
@@ -218,7 +242,34 @@ const Navbar = () => {
                     </Link>
                   ))}
 
-
+                  {/* More Dropdown Mobile */}
+                  <div className="border-t border-gray-700 pt-4">
+                    <button
+                      onClick={() => setIsMoreOpen(!isMoreOpen)}
+                      className="flex items-center justify-between w-full p-3 rounded-lg text-sm text-white dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
+                    >
+                      <span className="text-sm font-medium">More</span>
+                      {isMoreOpen ? (
+                        <ChevronUp className="h-5 w-5 text-[#FBC400]" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-[#FBC400]" />
+                      )}
+                    </button>
+                    {isMoreOpen && (
+                      <div className="ml-3 mt-2 space-y-2">
+                        {moreItems.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            className="block p-2 rounded-lg text-xs text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Mobile Actions */}

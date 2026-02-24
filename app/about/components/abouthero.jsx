@@ -17,7 +17,7 @@ const AboutHero = () => {
         </h1>
 
         {/* Paragraph */}
-        <p className="max-w-3xl text-base sm:text-lg md:text-xl lg:text-xl xl:text-[16px] text-yellow-500 mb-8 leading-relaxed">
+        <p className="max-w-3xl text-base sm:text-lg md:text-xl lg:text-xl xl:text-[16px] text-gray-300 mb-8 leading-relaxed">
           From a regional supplier to a trusted global partner in mining,
           construction, and railway maintenance. Delivering precision
           engineering solutions since 1993.
