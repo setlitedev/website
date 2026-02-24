@@ -14,17 +14,17 @@ export default function EngineAndTransmissionSections() {
   const images =
     tab === "engine"
       ? [
-          engineData.heroImage,
-          engineData.heroImage1,
-          engineData.heroImage2,
-          engineData.heroImage3,
-        ]
+        engineData.heroImage,
+        engineData.heroImage1,
+        engineData.heroImage2,
+        engineData.heroImage3,
+      ]
       : [
-          engineData.transmission.heroImage,
-          engineData.transmission.heroImage1,
-          engineData.transmission.heroImage2,
-          engineData.transmission.heroImage3,
-        ];
+        engineData.transmission.heroImage,
+        engineData.transmission.heroImage1,
+        engineData.transmission.heroImage2,
+        engineData.transmission.heroImage3,
+      ];
 
   // Auto-slide carousel every 4 seconds
   useEffect(() => {
@@ -55,21 +55,19 @@ export default function EngineAndTransmissionSections() {
         {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-10">
           <button
-            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${
-              tab === "engine"
-                ? "border-yellow-400 text-yellow-400"
-                : "border-transparent text-gray-400 hover:text-yellow-400"
-            }`}
+            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${tab === "engine"
+              ? "border-yellow-400 text-yellow-400"
+              : "border-transparent text-gray-400 hover:text-yellow-400"
+              }`}
             onClick={() => setTab("engine")}
           >
             ENGINE SALES
           </button>
           <button
-            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${
-              tab === "transmission"
-                ? "border-yellow-400 text-yellow-400"
-                : "border-transparent text-gray-400 hover:text-yellow-400"
-            }`}
+            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${tab === "transmission"
+              ? "border-yellow-400 text-yellow-400"
+              : "border-transparent text-gray-400 hover:text-yellow-400"
+              }`}
             onClick={() => setTab("transmission")}
           >
             TRANSMISSION SALES
@@ -92,6 +90,7 @@ export default function EngineAndTransmissionSections() {
                     src={images[carouselIndex]}
                     alt={`Engine Image ${carouselIndex + 1}`}
                     fill
+                    sizes="(max-width: 768px) 300px, 400px"
                     className="object-cover rounded-lg shadow-lg transition-all duration-700"
                   />
                 </div>
@@ -153,6 +152,7 @@ export default function EngineAndTransmissionSections() {
                     src={images[carouselIndex]}
                     alt={`Transmission Image ${carouselIndex + 1}`}
                     fill
+                    sizes="(max-width: 768px) 300px, 400px"
                     className="object-cover rounded-lg shadow-lg transition-all duration-700"
                   />
                 </div>
@@ -198,15 +198,6 @@ export default function EngineAndTransmissionSections() {
           </div>
         )}
 
-        {/* Disclaimer */}
-        <div className="border-b border-gray-800 px-4 pb-10 pt-10">
-          <p className="text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
-            <strong>Disclaimer:</strong> All brand names and images used are
-            solely for reference and illustration purposes. Setlite Engineers
-            Limited does not imply any ownership or direct affiliation unless
-            specifically stated.
-          </p>
-        </div>
 
         <Footer />
       </section>

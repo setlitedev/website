@@ -92,11 +92,10 @@ export default function ServiceCategories() {
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
                   style={{
-                    backgroundImage: `url(${
-                      item.image?.startsWith("http") || item.image?.startsWith("/")
+                    backgroundImage: `url(${item.image?.startsWith("http") || item.image?.startsWith("/")
                         ? item.image
                         : "/" + item.image
-                    })`,
+                      })`,
                   }}
                 ></div>
 
@@ -143,9 +142,8 @@ export default function ServiceCategories() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-3 w-3 rounded-full transition ${
-              current === i ? "bg-yellow-400" : "bg-gray-600"
-            }`}
+            className={`h-3 w-3 rounded-full transition ${current === i ? "bg-yellow-400" : "bg-gray-600"
+              }`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}

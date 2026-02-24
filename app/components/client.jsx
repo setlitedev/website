@@ -13,6 +13,8 @@ const equipmentTypes = [
   "/c8.png",
   "/c9.png",
   "/c10.png",
+  "/c11.png",
+  "/c12.png",
 ];
 
 const Clients = () => {
@@ -49,8 +51,8 @@ const Clients = () => {
 
         {/* Carousel */}
         <div className="relative">
-      
-          
+
+
 
           <div
             ref={scrollRef}

@@ -7,8 +7,8 @@ const Product = () => {
   return (
     <div>
       <ProductHero />
-      <Categories/>
-      <Footer/>
+      <Categories />
+      <Footer />
     </div>
   )
 }

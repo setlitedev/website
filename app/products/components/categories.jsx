@@ -12,8 +12,8 @@ const Categories = () => {
       id === "avtec"
         ? `/products/${id}`
         : id === "engine"
-        ? "/products/engine"
-        : `/products/others/${id}`
+          ? "/products/engine"
+          : `/products/others/${id}`
     );
   };
 
