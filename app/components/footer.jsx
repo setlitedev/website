@@ -7,7 +7,7 @@ import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white"> 
+    <footer className="bg-black text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row justify-between items-start">
         {/* Left Section: Logo, Description, Social Media */}
@@ -20,7 +20,7 @@ const Footer = () => {
                 alt="Setlite Logo"
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-auto h-auto"
               />
             </div>
             <div>
@@ -122,10 +122,20 @@ const Footer = () => {
         </div>
       </div>
 
-     
+
+
+      {/* Disclaimer Section */}
+      <div className="border-t border-gray-800 px-4 py-4">
+        <p className="text-[10px] md:text-[11px] text-gray-500 text-center max-w-5xl mx-auto leading-relaxed">
+          <strong>Disclaimer:</strong> All brand names and images used are
+          solely for reference and illustration purposes. Setlite Engineers
+          Limited does not imply any ownership or direct affiliation unless
+          specifically stated.
+        </p>
+      </div>
 
       {/* Bottom Separator and Copyright */}
-      <div className="border-t border-gray-700 pt-4 pb-6">
+      <div className="border-t border-gray-800 pt-4 pb-6">
         <p className="text-xs text-gray-400 text-center">
           © 2025 Setlite Engineers Limited. All rights reserved.
         </p>

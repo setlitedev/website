@@ -18,6 +18,8 @@ const Geography = dynamic(
   { ssr: false }
 );
 
+import { ShieldCheck, BadgeCheck, Package, Globe, Award, Headphones } from "lucide-react";
+
 // 🌍 World topojson data
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -30,27 +32,32 @@ const StatsSection = () => {
     {
       title: "ISO Certified",
       description: "Meeting global quality standards",
-      icon: require("lucide-react").ShieldCheck,
+      icon: ShieldCheck,
+    },
+    {
+      title: "ZED Certified",
+      description: "Zero Defect Zero Effect manufacturing compliance",
+      icon: BadgeCheck,
     },
     {
       title: "Trusted Supplier",
       description: "Over 1,00,000+ parts supplied worldwide",
-      icon: require("lucide-react").Package,
+      icon: Package,
     },
     {
       title: "Global Network",
       description: "Supplying to 50+ countries",
-      icon: require("lucide-react").Globe,
+      icon: Globe,
     },
     {
       title: "30+ Years Experience",
       description: "Three decades of expertise",
-      icon: require("lucide-react").Award,
+      icon: Award,
     },
     {
       title: "Customer Support",
       description: "24/7 assistance worldwide",
-      icon: require("lucide-react").Headphones,
+      icon: Headphones,
     },
   ];
 
@@ -169,22 +176,22 @@ const StatsSection = () => {
 
         {/* Stats Grid */}
         <div className="flex flex-wrap justify-center gap-8 mb-20">
-    {stats.map((stat, index) => (
-  <div
-    key={index}
-    className="text-center bg-[#272B30] py-4 rounded-xl shadow-md w-72 border-amber-50 border-2"
-  >
-    <div className="text-[12px] font-bold">
-      <CountUpNumber end={stat.number} suffix={stat.suffix} />
-    </div>
-    <h3 className="text-lg md:text-[16px] font-semibold mt-2">
-      {stat.label}
-    </h3>
-    <p className="text-sm md:text-[12px] text-gray-400">
-      {stat.description}
-    </p>
-  </div>
-))}
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="text-center bg-[#272B30] py-4 rounded-xl shadow-md w-72 border-amber-50 border-2"
+            >
+              <div className="text-[12px] font-bold">
+                <CountUpNumber end={stat.number} suffix={stat.suffix} />
+              </div>
+              <h3 className="text-lg md:text-[16px] font-semibold mt-2">
+                {stat.label}
+              </h3>
+              <p className="text-sm md:text-[12px] text-gray-400">
+                {stat.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Global Sourcing Network */}
@@ -233,7 +240,7 @@ const StatsSection = () => {
         </div>
 
         {/* ✅ Certification Badges */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-6 mt-16">
           {badges.map((badge, index) => {
             const Icon = badge.icon;
             return (
