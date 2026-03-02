@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://setlite.com',  // ✅ change to your primary domain
+  siteUrl: 'https://www.setlite.com',  // ✅ change to your primary domain
   generateRobotsTxt: true,         // will create robots.txt
   sitemapSize: 7000,
   outDir: 'public',                // places sitemap/robots.txt in /public

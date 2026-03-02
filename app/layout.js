@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://www.setlite.com"),
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: "Setlite Engineers Limited | Heavy Machinery Maintenance, Spare Parts & Service Solutions – India & Global",
   description:
     "Setlite Engineers Limited is a global leader in heavy equipment and mining machinery solutions. For over 30 years we provide expert maintenance, OEM spare parts, engine & transmission overhauling, and annual service contracts for mining, construction, railway and metro equipment across India and worldwide. Trusted by major OEMs and industries for reliable service, fast delivery, and cutting-edge workshop facilities.",
@@ -71,10 +75,13 @@ export const metadata = {
 };
 
 
+import OrganizationSchema from "./components/OrganizationSchema";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <OrganizationSchema />
         <Navbar />
         {children}
       </body>

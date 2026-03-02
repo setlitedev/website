@@ -1,0 +1,26 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "setlite.in"
+                }
+            ],
+            "destination": "https://www.setlite.com/:path*",
+            "statusCode": 301
+        },
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.setlite.in"
+                }
+            ],
+            "destination": "https://www.setlite.com/:path*",
+            "statusCode": 301
+        }
+    ]
+}
